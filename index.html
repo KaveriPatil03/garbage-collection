@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage collection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- HEADER START -->
+    <section class="header">
+        <div class="container-fluid">
+             
+            <!-- navbar start -->
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container-fluid ms-5">
+                    <a class="navbar-brand" href="index.html"><i class="fa fa-truck" aria-hidden="true"></i>
+                        <span class="logo">Garbage-Collection</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="auth/about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="auth/services.html" id="navbarDropdown" role="button"
+                                    aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="auth/zero.html">Zero Waste</a></li>
+                                    <li><a class="dropdown-item" href="auth/dumpster.html">Dumpster Rental</a></li>
+                                    <li><a class="dropdown-item" href="auth/portable_toilet.html">Portable Toilet</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="auth/industrial.html">Industrial Services</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="auth/commercial.html">Commercial Services</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="auth/recycling.html">Recycling Services</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="auth/gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="auth/contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="auth/schedule_pickup.html">Schedule Pickup</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar end -->
+        <!-- slider start -->
+        <div class="slider">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- <img src="images/slider-1.jpg" class="d-block w-100" alt="..."> -->
+                        <div class="img1"></div>
+                        <div class="carousel-caption d-md-block" data-aos="zoom-in" data-aos-duration="2000">
+                            <h2>Better Waste Company</h2>
+                            <p>Happy workers for waste management</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                        <div class="img2"></div>
+                        <div class="carousel-caption d-md-block" data-aos="zoom-in" data-aos-duration="2000">
+                            <h2>Keep Calm and Recycle</h2>
+                            <p>Provide smater + effective waste solution</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                        <div class="img3"></div>
+                        <div class="carousel-caption d-md-block" data-aos="zoom-in" data-aos-duration="2000">
+                            <h2>Never Refuse To Reuse</h2>
+                            <p>We provide superior value, service and effort.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- slider end -->
+
+    </section>
+    <!-- HEADER END -->
+
+    <!-- RECYCLING START -->
+    <section class="recycle">
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-4 col-lg-4 col-12">
+                    <div class="card">
+                        <!-- <div>
+                        <i class="fa-solid fa-recycle"></i>
+                    </div> -->
+                        <div class="card-body" style="width: 20rem;">
+                            <p class="card-title text-muted">Recycling Solution</p>
+                            <h5 class="card-title">For Residential Area</h5>
+                            <p class="card-text">Wastey now giving their recycling service for residential areas
+                                worldwide.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-12">
+                    <div class="card">
+                        <div class="card-body" style="width: 20rem;">
+                            <p class="card-title text-muted">Recycling Solution</p>
+                            <h5 class="card-title">For Small Business</h5>
+                            <p class="card-text">Wastey now gives their recycling service for businesses around the
+                                globe</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-12">
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                            <p class="card-title text-muted">Recycling Solution</p>
+                            <h5 class="card-title">For Govt & Education</h5>
+                            <p class="card-text">Wastey now gives their recycling service for education around the
+                                globe.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RECYCLING END -->
+
+
+    <!-- WHAT WE DO START -->
+    <section class="wt_we_do my-5 " data-aos="fade-down" data-aos-duration="1500">
+        <div class=" wrapper">
+            <div class="container-fluid">
+                <div class="text-center py-3">
+                    <h1 class="pb-3">What We Do</h1>
+                    <p>We provide end-to-end waste management services based on the principles of circular economy. We
+                        handle waste sustainably & responsibly for MNCs, tech parks, residential communities and other
+                        bulk generating organizations and institutions. Are you a bulk waste generator? Connect with us
+                        to ensure that your brand becomes zero waste to landfill.</p>
+                </div>
+
+                <div class="row py-5 " data-aos="zoom-in-up" data-aos-duration="1500">
+                    <div class="col-md-3 col-sm-6 mb-3 wwd">
+                        <div class="content1 text-center">
+                            <a href="#" class="content_link">
+                                <img src="images/what_we_do/wwd1.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="content_info text-center mt-3 p-2">
+                            <p>Zero waste models for smart cities</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-3 wwd">
+                        <div class="content1 text-center">
+                            <a href="#" class="content_link">
+                                <img src="images/what_we_do/wwd2.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="content_info text-center mt-3 p-1">
+                            <p>Empowering Independent Entrepreneurs through Job Creation</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-3 wwd">
+                        <div class="content1 text-center">
+                            <a href="#" class="content_link">
+                                <img src="images/what_we_do/wwd4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="content_info text-center mt-3 p-3">
+                            <p>Partner with Citizens</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-3 wwd">
+                        <div class="content1 text-center">
+                            <a href="#" class="content_link">
+                                <img src="images/what_we_do/wwd5.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="content_info text-center mt-3 p-3">
+                            <p>Partner with Citizens</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- WHAT WE DO END -->
+
+    <!-- MATERIALS WE COLLECT START -->
+    <section class="materials my-5" >
+        <div class="wraper my-5">
+            <div class="container-fluid">
+                <div class="container mat-collection" data-aos="zoom-in-up" data-aos-duration="1800">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-12 col-12">
+                            <h2 class="mt-3">Waste Materials We Collect. Recycle & Dispose</h2>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-12 col-12">
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Steel</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Plastic</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Lights & Bulbs</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Large Trash</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Books & Papers</p>
+                            </span>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-12 col-12">
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Common Waste</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Aluminium</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Bottles</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Food & Grocery</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-circle-check mt-1"></i>
+                                <p class="ms-2">Electronic & Glass</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mat-img">
+                    <h2 class="pt-5">Manage Waste Effectively and Reduce Environmental Impact</h2>
+                    <div class="mt-btn">
+                        <a href="auth/schedule_pickup.html">
+                            <button type="button" class="btn btn-danger">Schedule Pickup</button>
+                        </a>
+                        <a href="auth/contact.html">
+                            <button type="button" class="btn btn-danger">Contact Us</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MATERIALS WE COLLECT END -->
+
+    <!-- OUR SERVICES START --> 
+    <section class="services my-5" data-aos="fade-up" data-aos-duration="1500">
+        <div class="wrapper pt-5">
+            <div class="container-fluid">
+                <div class="text-center">
+                    <h1 class="pb-5">Our Services</h1>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active carousel-button" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="carousel-button" aria-label="Slide 2"></button>
+                      <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/zero_waste.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Zero waste</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/zero.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/dumpster_rental.jpg" alt="img-1"
+                                            class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Dumpster Rental</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/dumpster.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/poratble_toilet.jpg" alt="img-1"
+                                            class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Portable Toilet</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/portable_toilet.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/industrial_service.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Industrial Services</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/industrial.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/commercial_services.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Commercial Services</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/commercial.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/recycling_services.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Recycling Services</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/recycling.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/industrial_service.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Industrial Services</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/industrial.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-3 col-12">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/services/dumpster_rental.jpg" alt="img-1"
+                                            class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center my-3">
+                                        <h3>Dumpster Rental</h3>
+                                        <!-- <p>hhgdhg</p> -->
+                                        <a href="auth/dumpster.html" class="main-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Read
+                                                More</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button> -->
+                  </div>
+
+              
+            </div>
+        </div>
+    </section>
+    <!-- OUR SERVICES END -->
+
+    <!-- TYPES OF DUMPSTER RENTAL START -->
+    <section class="dumpster my-5" data-aos="zoom-in" data-aos-duration="1800">
+        <div class="wrapper">
+            <div class="container-fluid pb-5">
+                <div class="dump-content text-center py-5">
+                    <h1>Types of dumpster rental</h1>
+                    <p>Waste Connections offers a variety of dumpster rentals for any type of project or business need:
+                    </p>
+                </div>
+                <div>
+                    <div class="row m-2">
+                        <div class="col-md-4 col-lg-4 col-12 roc">
+                            <div class="dumpster-img">
+                                <img src="images/dumpster/Roll-off-Containers_.jpg" alt="">
+                            </div>
+                            <div class="dumpstr-content">
+                                <h5>Roll-Off Containers</h5>
+                                <h6 class="text-muted">SIZES: 10 YARD, 20 YARD, 30 YARD</h6>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Make the job easier for yourself and your employees.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Reduce your reliance on the landfill.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Keep worksite garbage hazards in one place.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-12 roc">
+                            <div class="dumpster-img">
+                                <img src="images/dumpster/Commercial-Dumpsters.jpg" alt="">
+                            </div>
+                            <div class="dumpstr-content">
+                                <h5>Commercial Dumpsters</h5>
+                                <h6 class="text-muted">SIZES: 4 YARD, 6 YARD, 8 YARD</h6>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Make the job easier for yourself and your employees.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Reduce your reliance on the landfill.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Keep worksite garbage hazards in one place.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-12 roc">
+                            <div class="dumpster-img">
+                                <img src="images/dumpster/Trash-Compactors.jpg" alt="">
+                            </div>
+                            <div class="dumpstr-content">
+                                <h5>Trash Compactors</h5>
+                                <h6 class="text-muted">SIZES: COMMERCIAL AND INDUSTRIAL</h6>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Make the job easier for yourself and your employees.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Reduce your reliance on the landfill.</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-circle-check mt-1"></i>
+                                    <p class="fs-6 ms-2">Keep worksite garbage hazards in one place.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="need-dumpster" data-aos="fade-up" data-aos-duration="2000">
+                    <h5 class="text-center pt-3">DUMPSTER RENTAL</h5>
+                    <div class="need-dumpster-content">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3 col-12 mb-4">
+                                <img src="images/dumpster/need-dumpster.jpeg" alt="" class="ms-3" width="250px">
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-12">
+                                <h2 class="pt-3">Need a Dumpster for Home or Business?</h2>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-12 dump-call pt-3">
+
+                                <button type="button" class="btn btn-secondary">CALL 815-478-7274</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TYPES OF DUMPSTER RENTAL START -->
+
+    <!-- OUR WORKING PROCESS START -->
+    <section class="working my-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+        <div class="wrapper">
+            <div class="container-fluid pb-5">
+                <div class="text-center py-5">
+                    <h1>Our Working Process</h1>
+                </div>
+                <div>
+                    <div class="row mx-5" data-aos="flip-up" data-aos-duration="2000">
+                        <div class="col-md-6 col-lg-3 col-12">
+                            <div class="working-img">
+                                <img src="images/working/garbage_truck.jpg" height="200px" width="200px" alt="photo"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="working-content">
+                                <h5 class="my-3 ms-5">Pick Up</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 col-12">
+                            <div class="working-img">
+                                <img src="images/working/garbage_collect.jpg" height="200px" width="200px" alt="photo"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="working-content">
+                                <h5 class="my-3 ms-5">Collection</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 col-12">
+                            <div class="working-img">
+                                <img src="images/working/garbage_process.jpg" height="200px" width="200px" alt="photo"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="working-content">
+                                <h5 class="my-3 ms-5">Process</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 col-12">
+                            <div class="working-img">
+                                <img src="images/working/garbage_disposed.jpg" height="200px" width="200px" alt="photo"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="working-content">
+                                <h5 class="my-3 ms-5">Disposed</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- OUR WORKING PROCESS END -->
+
+    <!-- OUR RECYCLING FACTS START -->
+    <section class="facts my-5" data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+        <div>
+            <div class="container-fluid pb-5">
+                <h1 class="text-center pt-5">Our Recycling Facts</h1>
+                <p class="text-center pt-2 pb-4">We everyday complete recycling of 95% cardboard, aluminum 78% and 68%
+                    of plastic around
+                    the world.</p>
+                <div class="fact-img">
+                    <div class="row ms-5 mt-4">
+                        <div class="col-md-7 col-lg-7 col-12">
+
+                            <div class="names my-5">
+                                <p class="fs-5 fw-5 text-white">Plastic</p>
+                                <div class="progress w-75">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 78%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">78%</div>
+                                </div>
+
+                                <p class="fs-5 fw-5 text-white">Cardboard</p>
+                                <div class="progress w-75">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                                <p class="fs-5 fw-5 text-white">Aluminium</p>
+                                <div class="progress w-75">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 63%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">63%</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-5 col-12">
+                            <div id="carouselExampleInterval" class="carousel slide carousel-fade"
+                                data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="2000">
+                                        <img src="images/bottles.jpg" class="d-block w-100" alt="..."width="100%" height="393px">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="images/waste_paper.jpeg" class="d-block w-100" alt="..."
+                                            height="393px">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="images/metal_waste.jpg" class="d-block w-100" alt="..."
+                                            height="393px">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- OUR RECYCLING FACTS END -->
+
+
+    <!-- RECENTLY COMPLETED PROJECTS START-->
+    <section class="projects mt-5" data-aos="zoom-in" data-aos-duration="2000">
+        <div>
+            <div class="container-fluid">
+                <h1 class="text-center py-5">Recently Completed Projects</h1>
+                <div class="new-arrivals wrapper project-details">
+
+                    <div class="container" data-aos="fade-down" data-aos-duration="900">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 col-12 p-sm-0 card-banner">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/recent_projects/pro1.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center">
+                                        <h5>Grocery Waste Removal</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12 p-sm-0 card-banner">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/recent_projects/pro2.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center">
+                                        <h5>Home Trash Picked</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 col-12 p-sm-0 card-banner">
+                                <div class="card card-banner position-relative text-center">
+                                    <a href="#" class="card-thumb">
+                                        <img src="images/recent_projects/pro3.jpg" alt="img-1" class="img-fluid">
+                                    </a>
+                                    <div class="banner-info text-center">
+                                        <h5>Construction Collection</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RECENTLY COMPLETED PROJECTS END-->
+
+    <!-- FOOTER START -->
+    <section class="footer">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>Get to know us</h5>
+                        <ul class="nav flex-column mt-4">
+                            <li class="nav-item mb-2"><a href="auth/about.html" class="nav-link p-0 text-white">About Us</a></li>
+                            <li class="nav-item mb-2"><a href="auth/services.html" class="nav-link p-0 text-white">Services</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="auth/gallery.html" class="nav-link p-0 text-white">Gallery</a></li>
+                            <li class="nav-item mb-2"><a href="auth/contact.html" class="nav-link p-0 text-white">Contact</a></li>
+                            <!-- <li class="nav-item mb-2"><a href="auth/about.html" class="nav-link p-0 text-white">About</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h5>Let Us Help You</h5>
+                        <ul class="nav flex-column mt-4">
+                            <li class="nav-item mb-2"><a href="auth/contact.html" class="nav-link p-0 text-white">Contact Us</a></li>
+                            <li class="nav-item mb-2"><a href="auth/about.html" class="nav-link p-0 text-white">FAQ's</a></li>
+                            <li class="nav-item mb-2"><a href="auth/schedule_pickup.html" class="nav-link p-0 text-white">Schedule Pickup</a></li>
+                            <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li> -->
+                            <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h5>Our Services</h5>
+                        <ul class="nav flex-column mt-4">
+                            <li class="nav-item mb-2"><a href="auth/zero.html" class="nav-link p-0 text-white">Zero Waste</a></li>
+                            <li class="nav-item mb-2"><a href="auth/dumpster.html" class="nav-link p-0 text-white">Dumpster Rental</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="auth/portable_toilet.html" class="nav-link p-0 text-white">Portable Toilet</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="auth/industrial.html" class="nav-link p-0 text-white">Industrial
+                                    Services</a></li>
+                            <li class="nav-item mb-2"><a href="auth/commercial.html" class="nav-link p-0 text-white">Commercial
+                                    Services</a></li>
+                            <li class="nav-item mb-2"><a href="auth/recycling.html" class="nav-link p-0 text-white">Recycling Services</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 offset-1">
+                        <form>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of whats new and exciting from us.</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                                <button class="btn btn-danger" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <p>© 2021 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-twitter fa-2x"></i></a>
+
+                        <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-instagram fa-2x"></i></a>
+
+                        <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-facebook fa-2x"></i></a>
+
+                    </ul>
+                </div>
+
+                <!-- Back to top button -->
+                <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </footer>
+
+        </div>
+    </section>
+    <!-- FOOTER END -->
+    
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

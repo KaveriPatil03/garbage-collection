@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-image: -webkit-linear-gradient(0deg,rgba(7,18,48,.9)10%,rgba(14, 3, 2, 0.4) 50%),url('../images/slider-1.jpg');
+    min-width: 100%;
+    min-height: 65vh;
+    background-size: cover;
+    /* opacity: .8; */
+}
+
+.header .abt_slider{
+    position: relative;
+    top: 190px;
+    text-align: center;
+    z-index: 15;
+}
+.header .abt_slider h1{
+    font-weight: 600!important;
+    color: white;
+
+}
+
+.img{
+    background-image: linear-gradient(rgba(36, 33, 33, 0.3),rgba(37, 35, 35, 0.3)),url('../images/about/mission.jpg');
+    min-width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* our mission */
+.mv-img{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(65, 66, 66, 0.3),rgba(13, 13, 14, 0.3)),url(../img/about/mission.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+.mv{
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s;
+}
+.mv:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3); 
+    transform: translateY(-20px);
+}
+/* end */
+
+/* our team */
+.team{
+    background: #f1f3f5;
+    min-height: 95vh;
+}
+.team .card{
+    /* border: none!important; */
+    border: 1px solid rgb(212, 211, 211)!important;
+    border-radius: 5px;
+    position: relative;
+    /* top: -80px; */
+    transition: all .5s ease-out 0s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    /* height: auto!important; */
+}
+
+.team .card:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.team .card img{
+    min-width: auto;
+    height: 45vh;
+}
+/* end */
+/* Manage Waste Effectively */
+.manage-waste .manage-img{
+    background-image: linear-gradient(#071230,#07123087),url('../images/about/bin.jpg');
+    min-width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+/* end */
+
+/* in the news */
+.news{
+    background: #f1f3f5;
+}
+/* end */
+
+/* request */
+.request{
+    /* display: flex; */
+    background: #f1f3f5;
+    min-height: 20vh;
+    /* align-items: center; */
+}
+.request .req h1{
+    color: #071230;
+    /* display: flex; */
+    /* justify-content: center; */  
+}
+.request .req .btn:hover{
+    background: #071230;
+    color: white;
+    border: none!important;
+}
+/* end */

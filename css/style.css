@@ -1,0 +1,386 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* p{
+    color: #071230;
+} */
+
+h1{
+    font-family: 'Poppins', sans-serif!important;
+    color: #071230;
+}
+i{
+    color: #b10f3c;
+}
+
+/* navbar */
+.logo{
+    color:#071230;
+    font-weight: 600;
+    /* padding-left: 10px; */
+}
+.navbar{
+    background: #dadcdd!important;
+    transition: .5s!important;
+    color: #071230;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    /* background-color: #102b7c; */
+}
+.navbar .navbar-brand{
+    color: #b10f3c!important;
+    font-size: 25px;
+    font-weight: 500!important;
+}
+.navbar .navbar-toggler{
+    background: #071230;
+}
+.navbar ul li{
+    font-size: 1.1rem;
+    color: #071230!important;
+    padding: 10px;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.navbar ul li a{
+    color: #071230!important;
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar ul li a:hover{
+    color: #b10f3c!important;
+    /* transition: 0.7s all; */
+    font-weight: 500;
+}
+.navbar li a.active{
+    color: #b10f3c!important;
+    font-weight: 500;
+}
+.header .dropdown:hover>.dropdown-menu{
+    display: block;
+    /* width: 100%; */
+}
+
+.dropdown {
+    position:static !important;
+}
+.dropdown-menu {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+    margin-top:0px !important;
+    background: #dadcdd!important;
+    /* min-width:98% !important;
+    float: left; */
+}
+/* end */
+
+/* carousel*/
+.img1{
+    
+    background-image:-webkit-linear-gradient(0deg,rgba(7,18,48,.9),rgba(53,6,3,.4) 50%), url('../images/carousel1.jpg');
+    width: 100%;
+    min-height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* object-fit: fill; */
+}
+.img2{
+    background-image:-webkit-linear-gradient(0deg,rgba(7,18,48,.9),rgba(53,6,3,.4) 50%), url('../images/slider-1.jpg');
+    min-width: 100%;
+    min-height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+}
+.img3{
+    background-image:-webkit-linear-gradient(0deg,rgba(7,18,48,.9),rgba(53,6,3,.4) 50%), url('../images/carousel3.jpg');
+    min-width: 100%;
+    min-height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+}
+
+.carousel-caption{
+    position: absolute!important;
+    bottom: 60px!important;
+}
+.carousel-caption h2{
+    font-size: 2.5rem!important;
+    font-weight: 600 !important;
+}
+.carousel-caption p{
+    font-size: 1.5rem!important;
+    font-weight: 500 !important;
+}
+.carousel-indicators {
+    position: relative;
+    bottom: -60px!important;
+}
+.carousel-indicators .carousel-button{
+    background: #071230!important;
+    max-width: 8px!important;
+    max-height: 3px!important;
+    /* color: #071230!important; */
+}
+/* end */
+
+/* Recycling solution */
+.recycle .row{
+    position: relative!important;
+    bottom: 30px!important;
+}
+.recycle .row .card{
+    transition: all .5s ease-out 0s;
+}
+.recycle .row .card:hover{
+    transform: scale(1.1);
+    opacity: 0.9;
+    background: #f1f3f5;
+    color: #071230;
+}
+/* end */
+
+/* What we do */
+.wt_we_do{
+    background: #f1f3f5;
+}
+.wt_we_do .wwd{
+    transition: 0.5s;
+    background: #e3e7f3;
+}
+.wt_we_do .content1{
+    /* border: 1px solid rgb(197, 196, 196)!important; */
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    transition: 0.5s;
+}
+.wt_we_do .content_info{
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+    position: relative!important;
+    bottom: 15px;
+    height: 55px;
+    transition: 0.5s;
+    border-top: 1px solid #cecece;
+    /* margin-top: 10px; */
+}
+.wt_we_do .wwd:hover{
+    transform: translateY(-20px);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    /* background: #1c2849; */
+    opacity: 0.8;
+    /* color: white; */
+    font-size: 15px;
+    border-radius: 12px;
+}
+/* end */
+
+/* Services */
+.services{
+    background: #f1f3f5;
+    min-height: 90vh;
+}
+.services .card{
+    min-width: auto;
+    min-height: 50vh;
+    transition: all .5s ease-out 0s;
+}
+
+.services .card:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    background: #071230;
+    color: white;
+}
+
+.services .card:hover .btn{
+    background: #b10f3c!important;
+    color: #cecece!important;
+}
+/* services end */
+
+/* dumpster rental */
+.need-dumpster, .need-dumpster h5{
+    background: #071230;
+    color: white;
+}
+.need-dumpster .btn{
+    min-width: 180px;
+    min-height: 50px;
+    background: #b10f3c;
+    border: 1px solid #b10f3c;
+}
+.need-dumpster p{
+    color: white;
+}
+.dumpster p{
+    color: #071230;
+}
+.dumpster .roc{
+    transition: 0.5s;
+}
+.dumpster .roc:hover{
+    transform: translateY(-20px);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+/* dumpster rental end */
+
+/* waste materials we collect */
+.materials{
+    min-height: 100vh;
+}
+.materials .mat-img{
+    background-image:linear-gradient(#071230,#07123087), url('../images/collect.webp');   
+    min-width: auto;
+    min-height: 60vh;
+    background-attachment: fixed!important;
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
+}
+.mat-img h2{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    color: white;
+}
+.mt-btn {
+    display: flex;
+    position: relative;
+    top: 100px;
+    justify-content: center;
+    color: white;
+}
+.mt-btn a{
+    padding: 10px;
+}
+.mat-collection{
+    background-color: #071230;
+    color: white;
+    position: relative;
+    top: 80px;
+}
+.mat-collection h1{
+    color: white;
+}
+/* waste materials we collect end */
+
+/* working process */
+.working{
+    min-width: auto;
+    min-height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #f1f3f5;
+    /* mix-blend-mode: luminosity; */
+    /* opacity: .9; */
+}
+/* end */
+
+/* recycling facts */
+.fact-img{
+    background-image:linear-gradient(#071230,#07123087), url('../images/collect.webp');   
+    min-width: auto;
+    min-height: 60vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.progress{
+    min-height: 0.8rem!important;
+    margin-bottom: 25px!important;
+}
+.projects{
+    background: #f1f3f5;
+    min-height: 100vh;
+}
+/* end */
+
+/* project details */
+.project-details .card{
+    border-radius: 30px!important;
+}
+
+.project-details img{
+    min-width: 100%;
+    min-height: 60vh;
+    /* opacity: 11; */
+}
+
+.new-arrivals .card-banner .card-thumb
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.new-arrivals .card-banner .card-thumb img
+{
+    transition: all .5s ease-out 0s;
+}
+.new-arrivals .card-banner .card-thumb img:hover
+{
+    /* background: #071230; */
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+/* end */
+
+/* footer */
+.footer{
+    background: #071230!important;
+}
+
+.footer h5{
+    color: white !important;
+    font-size: 22px;
+}
+
+.footer p{
+    color: rgb(163, 162, 162)!important;
+}
+
+.footer ul li a{
+    color: rgb(143, 142, 142)!important;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #b10f3c!important;
+    border: 1px solid  #b10f3c!important;
+  }
+#btn-back-to-top i{
+    color: white!important;
+}
+/* end */
+
+/* contact */
+.contact{
+    background: #f1f3f5;
+}
+.contact i{
+    color: #071230;
+}
+.contact .btn{
+    background: #b10f3c;
+    border: none;
+}
+.contact .btn:hover{
+    background: #071230;
+}
+.contact p{
+    font-size: 18px;
+    font-weight: 500;
+}
+/* contact end */
+/* Schedule */
+.schedule{
+    background: #f1f3f5;
+}
+.schedule .btn{
+    background: #b10f3c!important;
+    border: none!important;
+}
+
+.schedule .btn:hover{
+    background: #071230!important;
+}
+

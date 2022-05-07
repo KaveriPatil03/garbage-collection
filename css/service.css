@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    /* background-image: linear-gradient(#071230,#07123087)url('../images/slider-1.jpg'); */
+    background-image: -webkit-linear-gradient(0deg,rgba(7,18,48,.9)10%,rgba(14, 3, 2, 0.4) 50%),url('../images/slider-1.jpg');
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    /* opacity: .8; */
+}
+.header .abt_slider{
+    position: relative;
+    top: 190px;
+    /* text-align: center; */
+    z-index: 15;
+}
+.header .abt_slider h1{
+    font-weight: 600!important;
+    color: white;
+}
+
+/* our services */
+.our-services{
+    background: #f1f3f5;
+    min-height: 90vh;
+}
+.our-services .card{
+    min-width: auto;
+    min-height: 50vh;
+    transition: all .5s ease-out 0s;
+}
+
+.our-services .card:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    background: #071230;
+    color: white;
+}
+
+.our-services .card:hover .btn{
+    background: #b10f3c!important;
+}
+
+.card .card-img-top{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.card .card-img-top img{
+    min-height: 40vh;
+    transition: all .5s ease-out 0s;
+}
+.card .card-img-top img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card .card-body{
+    background: #f1f3f5;
+}
+/* end */
+
+
+/* Industries */
+.industries .card{
+    border: none!important;
+}
+.industries .card .card-img-top img{
+    min-width: 100%;
+    min-height: 42vh;
+}
+/* end */
+
+/* Commercial */
+.commercial-services .card .card-img-top img{
+    max-width: 100%;
+    min-height: 42vh;
+}
+/* end */
+
+/* Residential */
+.residential-services{
+    min-height: 150vh;
+}
+.residential-services .card .card-img-top img{
+    max-width: 100%;
+    min-height: 42vh;
+}
+/* end */
+
+
+
+/* services dropdown */
+.zero .pickup{
+    min-width: 250px;
+    min-height: 290px;
+    background: #071230;
+    color: white;
+}
+.zero .pickup-solution{
+    background: #f1f3f5;
+    color: #071230;
+    min-height: 40vh;
+}
+.zero .pickup-solution h3{
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 5px;
+}
+.zero .pickup-solution img{
+    position: relative;
+    right: 50px;
+    top: 20px;
+}
+.zero .cat{
+    background: #f1f3f5;
+}
+.zero .cat ul li{
+    padding: 10px;
+}
+.zero .cat ul li a{
+    color: #071230!important;
+    font-size: 18px;
+}
+
+.zero .cat ul li a:hover{
+    color: white!important;
+    font-size: 20px;
+    background: #071230;
+}
+
+.zero-content{
+    text-align: justify;
+    min-width: 760px;
+}
+.zero .nav-pills  li  a.active {
+    background-color: #071230!important;
+    color: white!important;
+}
+.zero .row .relaible{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: 1px solid rgb(240, 237, 237);
+    border-radius: 2px;
+    /* margin: 10px; */
+    min-height: 10vh; 
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    transition: all .5s ease-out 0s;
+}
+
+.zero .row .relaible:hover{
+    /* transform: scale(1.1);
+    opacity: 0.8; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.zero .row .relaible i{
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+
+}
+.zero .row .relaible p{
+    font-size: 18px;
+    margin-top: auto;
+    padding-left: 20px;
+}
+
+/* breadcrumb */
+.header .abt_slider .breadcrumb{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.header .abt_slider .breadcrumb li a{
+    text-decoration: none;
+    color: white;
+}
+.breadcrumb .breadcrumb-item .active a{
+    color: #071230!important;
+    background-color: #071230!important;
+}
+/* .breadcrumb-item+.breadcrumb-item::before{
+    color: white!important;
+} */
+
+/* breadcrumb end */
+.material .row .mat-cont{
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    margin:0px 10px;
+    border: 1px solid rgb(240, 237, 237);
+    border-radius: 2px;
+    transition: all .5s ease-out 0s;
+}
+.material .row .mat-cont:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card .card-body{
+    background: #f1f3f5;
+}
+
